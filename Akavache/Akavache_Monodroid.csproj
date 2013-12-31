@@ -21,7 +21,7 @@
     <SccProvider>
     </SccProvider>
     <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
-    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>false</RestorePackages>
   </PropertyGroup>
@@ -115,25 +115,31 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\ext\monodroid\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI">
-      <HintPath>..\ext\monodroid\ReactiveUI.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Core">
-      <HintPath>..\ext\monodroid\System.Reactive.Core.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\android\System.Reactive.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Interfaces">
-      <HintPath>..\ext\monodroid\System.Reactive.Interfaces.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\android\System.Reactive.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Linq">
-      <HintPath>..\ext\monodroid\System.Reactive.Linq.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\android\System.Reactive.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.PlatformServices">
-      <HintPath>..\ext\monodroid\System.Reactive.PlatformServices.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\android\System.Reactive.PlatformServices.dll</HintPath>
     </Reference>
     <Reference Include="Splat">
       <HintPath>..\ext\monodroid\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Debugger">
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\android\System.Reactive.Debugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Experimental">
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\android\System.Reactive.Experimental.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Providers">
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\android\System.Reactive.Providers.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -183,5 +189,23 @@
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <ItemGroup>
     <Folder Include="Portable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="rxforxamarin">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ReactiveUI\ReactiveUI\ReactiveUI_Monodroid.csproj">
+      <Project>{F92A477B-BB94-43C1-984E-E177EF9FEDB7}</Project>
+      <Name>ReactiveUI_Monodroid</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

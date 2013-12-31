@@ -43,31 +43,28 @@
     <Reference Include="monotouch" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\ext\monotouch\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\json.net-4.5.11\lib\ios\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Mobile">
-      <HintPath>..\ext\monotouch\Xamarin.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI.Cocoa">
-      <HintPath>..\ext\monotouch\ReactiveUI.Cocoa.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI.Mobile">
-      <HintPath>..\ext\monotouch\ReactiveUI.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveUI">
-      <HintPath>..\ext\monotouch\ReactiveUI.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\xamarin.mobile-0.7.1\lib\ios\Xamarin.Mobile.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Core">
-      <HintPath>..\ext\monotouch\System.Reactive.Core.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\ios\System.Reactive.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Interfaces">
-      <HintPath>..\ext\monotouch\System.Reactive.Interfaces.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\ios\System.Reactive.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.Linq">
-      <HintPath>..\ext\monotouch\System.Reactive.Linq.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\ios\System.Reactive.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Reactive.PlatformServices">
-      <HintPath>..\ext\monotouch\System.Reactive.PlatformServices.dll</HintPath>
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\ios\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Debugger">
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\ios\System.Reactive.Debugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Experimental">
+      <HintPath>..\..\MapApp\StYetAnother\StYetAnother\Components\rxforxamarin-2.1\lib\ios\System.Reactive.Experimental.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
@@ -79,9 +76,38 @@
   </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\ReactiveUI\ReactiveUI.Platforms\ReactiveUI.Cocoa_Monotouch.csproj">
+      <Project>{9091337A-9E94-4DBD-801E-15E1FDA78FFC}</Project>
+      <Name>ReactiveUI.Cocoa_Monotouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ReactiveUI\ReactiveUI.Mobile\ReactiveUI.Mobile_Monotouch.csproj">
+      <Project>{9091337A-9E94-4DBD-801E-15E10DB72FFC}</Project>
+      <Name>ReactiveUI.Mobile_Monotouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ReactiveUI\ReactiveUI\ReactiveUI_Monotouch.csproj">
+      <Project>{9091337A-9E94-4DBD-801E-05E1FDA78FFC}</Project>
+      <Name>ReactiveUI_Monotouch</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Akavache\Akavache_Monotouch.csproj">
       <Project>{9091337A-9E94-4DBD-801E-05E1FDA78FFC}</Project>
       <Name>Akavache_Monotouch</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>0.7.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="rxforxamarin">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>
